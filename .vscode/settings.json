@@ -1,0 +1,6 @@
+{
+  "yaml.schemas": {
+    "kubernetes://schema/v1@pod": "file:///c%3A/GitRepo/GitHub/k8s/qos-Burstable%20-pod.yaml"
+  },
+  "editor.acceptSuggestionOnEnter": "on"
+}
