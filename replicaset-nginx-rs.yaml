@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: nginx-rs
+  namespace: default
+spec:
+  replicas: 2 # Desired Pod number
+  selector: # Label Selector
+    matchLabels:
+      app: nginx
+  template: # Pod template
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          ports:
+            - containerPort: 80
