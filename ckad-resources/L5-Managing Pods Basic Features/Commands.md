@@ -100,3 +100,45 @@ curl http://localhost/date.txt
 
 ---
 
+<mark>Namespaces</mark>
+```dockerfile
+kubectl create namespace mynamespace
+
+```
+> to create a namespace
+
+```dockerfile
+kubectl ... -n namespace
+```
+> to work in specific namespace 
+
+
+```dockerfile
+kubectl get ... --all-n namespaces
+
+kubectl get all -A
+```
+> to see resources in all namespaces 
+
+```dockerfile
+kubectl create ns secret
+```
+> create a secret namespace 
+
+```dockerfile
+kubectl create -f busybox-ns.yaml
+```
+> create a anoter namespace 
+
+```dockerfile
+kubectl run secretginx --image=nginx -n secret
+```
+> run a container in specific namespace 
+
+```dockerfile
+kubectl describe ns secret
+```
+> describe specific namespace 
+
+
+---
